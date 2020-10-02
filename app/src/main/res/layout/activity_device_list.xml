@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".DeviceListActivity">
+
+    <LinearLayout
+        android:layout_above="@id/button_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_paired_devices"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="Paired devices \n(Click on any device to start chat)"
+            android:textColor="@android:color/black"
+            />
+
+        <ListView
+            android:id="@+id/paired_devices"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <ProgressBar
+            android:id="@+id/scan_progress_bar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_margin="5dp"/>
+
+
+        <TextView
+            android:id="@+id/title_new_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other available devices"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:textColor="@android:color/black"
+            />
+
+        <ListView
+            android:id="@+id/new_devices"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_scan"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="scan"
+
+        />
+
+</RelativeLayout>
