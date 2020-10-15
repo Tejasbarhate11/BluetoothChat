@@ -1,2 +1,2 @@
 # BluetoothChat
-A Chat Application whic uses bluetooth connection to send data.
+A Chat Application which uses bluetooth connection to send data.
